@@ -4,11 +4,9 @@ const cors = require('cors')
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const { MONGO_URI } = require("./config");
+const { MONGO_URI, PORT } = require("./config");
 
 const app = express()
-
-const PORT = 5000
 
 app.use(compression());
 app.use(express.json());
